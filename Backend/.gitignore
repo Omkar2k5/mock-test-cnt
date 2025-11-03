@@ -1,0 +1,101 @@
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.backup
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# IDE - Eclipse
+.classpath
+.project
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea_modules/
+
+# IDE - Visual Studio Code
+.vscode/
+.vscode-test/
+*.code-workspace
+.history/
+*.vsix
+
+# IDE - NetBeans
+nbproject/
+.nb-gradle/
+nb-configuration.xml
+
+# IDE - JetBrains
+*.jks
+*.keystore
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar
+*.gz
+*.rar
+*.log
+*.properties
+
+# Spring Boot
+application-*.properties
+application-*.yml
+application.properties.local
+
+# Gradle (if used)
+.gradle/
+build/
+gradle/
+
+# SonarQube
+.sonarqube/
+
+# Misc
+.env
+.env.local
+*.swp
+*.swo
+*~
+.project
+.tern-port
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+*.h2.db
+
+# Temporary files
+temp/
+tmp/
+*.tmp

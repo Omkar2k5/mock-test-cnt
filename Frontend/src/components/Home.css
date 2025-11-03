@@ -1,0 +1,384 @@
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  animation: slideDown 0.6s ease-out;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin: 0 0 10px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+}
+
+.header .subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.student-info-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: slideUp 0.6s ease-out 0.1s both;
+}
+
+.student-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info-item label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-item span {
+  font-size: 1.2rem;
+  color: #667eea;
+  font-weight: 500;
+}
+
+.info-item.cgpa-item span {
+  font-size: 1.5rem;
+  color: #764ba2;
+}
+
+.results-container {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: slideUp 0.6s ease-out 0.2s both;
+  overflow-x: auto;
+}
+
+.results-container h2 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 15px;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.results-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.results-table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.results-table td {
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.95rem;
+}
+
+.results-table tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+.results-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.results-table .code {
+  font-weight: 600;
+  color: #667eea;
+  width: 100px;
+}
+
+.results-table .name {
+  color: #333;
+  font-weight: 500;
+  min-width: 250px;
+}
+
+.results-table .marks {
+  text-align: center;
+  color: #555;
+}
+
+.results-table .total-marks {
+  text-align: center;
+  background-color: #f0f4ff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #667eea;
+}
+
+.results-table .grade {
+  text-align: center;
+}
+
+.grade-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: 50px;
+  text-align: center;
+}
+
+.grade-a\+ {
+  background-color: #4caf50;
+  color: white;
+}
+
+.grade-a {
+  background-color: #66bb6a;
+  color: white;
+}
+
+.grade-b {
+  background-color: #ffa726;
+  color: white;
+}
+
+.grade-c {
+  background-color: #ff7043;
+  color: white;
+}
+
+.grade-d {
+  background-color: #ef5350;
+  color: white;
+}
+
+.grade-f {
+  background-color: #c62828;
+  color: white;
+}
+
+.results-table tbody tr.grade-a\+ {
+  border-left: 4px solid #4caf50;
+}
+
+.results-table tbody tr.grade-a {
+  border-left: 4px solid #66bb6a;
+}
+
+.results-table tbody tr.grade-b {
+  border-left: 4px solid #ffa726;
+}
+
+.results-table tbody tr.grade-c {
+  border-left: 4px solid #ff7043;
+}
+
+.results-table tbody tr.grade-d {
+  border-left: 4px solid #ef5350;
+}
+
+.results-table tbody tr.grade-f {
+  border-left: 4px solid #c62828;
+}
+
+.summary-section {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  animation: slideUp 0.6s ease-out 0.3s both;
+}
+
+.summary-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.summary-card h3 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 15px;
+}
+
+.summary-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat .label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat .value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.stat .value.grade-badge {
+  font-size: 1.2rem;
+  padding: 8px 16px;
+  margin: 0 auto;
+}
+
+.footer-note {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  animation: slideUp 0.6s ease-out 0.4s both;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.footer-note p {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 20px 10px;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .student-info-card,
+  .results-container,
+  .summary-card,
+  .footer-note {
+    padding: 20px;
+  }
+
+  .results-table th,
+  .results-table td {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+
+  .results-table .name {
+    min-width: 150px;
+  }
+
+  .summary-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .student-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.4rem;
+  }
+
+  .header .subtitle {
+    font-size: 1rem;
+  }
+
+  .results-table th,
+  .results-table td {
+    padding: 8px;
+    font-size: 0.75rem;
+  }
+
+  .results-table .code {
+    width: 60px;
+  }
+
+  .student-info-card,
+  .results-container,
+  .summary-card,
+  .footer-note {
+    padding: 15px;
+  }
+}
