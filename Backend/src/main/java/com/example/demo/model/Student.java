@@ -8,7 +8,7 @@ import java.util.List;
 public class Student {
     @Id
     private String id;
-    private String prnNo;
+    private String PRNno;
     private String name;
     private int semester;
     private List<Subject> subjects;
@@ -16,8 +16,8 @@ public class Student {
     public Student() {
     }
 
-    public Student(String prnNo, String name, int semester, List<Subject> subjects) {
-        this.prnNo = prnNo;
+    public Student(String PRNno, String name, int semester, List<Subject> subjects) {
+        this.PRNno = PRNno;
         this.name = name;
         this.semester = semester;
         this.subjects = subjects;
@@ -31,12 +31,12 @@ public class Student {
         this.id = id;
     }
 
-    public String getPrnNo() {
-        return prnNo;
+    public String getPRNno() {
+        return PRNno;
     }
 
-    public void setPrnNo(String prnNo) {
-        this.prnNo = prnNo;
+    public void setPRNno(String PRNno) {
+        this.PRNno = PRNno;
     }
 
     public String getName() {

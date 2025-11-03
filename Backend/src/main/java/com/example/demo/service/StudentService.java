@@ -18,7 +18,7 @@ public class StudentService {
     }
 
     public Optional<Student> getStudentByPrnNo(String prnNo) {
-        return studentRepository.findByPrnNo(prnNo);
+        return studentRepository.findByPRNno(prnNo);
     }
 
     public Optional<Student> getStudentById(String id) {

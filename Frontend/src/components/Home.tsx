@@ -9,7 +9,7 @@ interface Subject {
 }
 
 interface StudentResult {
-  prnNo: string
+  PRNno: string
   name: string
   semester: number
   subjects: Subject[]
@@ -95,7 +95,7 @@ export function Home() {
             <div className="student-info">
               <div className="info-item">
                 <label>PRN Number:</label>
-                <span>{student.prnNo}</span>
+                <span>{student.PRNno}</span>
               </div>
               <div className="info-item">
                 <label>Name:</label>
