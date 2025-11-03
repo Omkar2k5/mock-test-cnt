@@ -1,14 +1,19 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 import java.util.List;
 
 @Document(collection = "Students")
 public class Student {
     @Id
     private String id;
-    private String PRNno;
+    
+    @Field("prnNo")
+    @JsonProperty("PRNno")
+    private String prnNo;
     private String name;
     private int semester;
     private List<Subject> subjects;
@@ -16,8 +21,8 @@ public class Student {
     public Student() {
     }
 
-    public Student(String PRNno, String name, int semester, List<Subject> subjects) {
-        this.PRNno = PRNno;
+    public Student(String prnNo, String name, int semester, List<Subject> subjects) {
+        this.prnNo = prnNo;
         this.name = name;
         this.semester = semester;
         this.subjects = subjects;
@@ -31,12 +36,12 @@ public class Student {
         this.id = id;
     }
 
-    public String getPRNno() {
-        return PRNno;
+    public String getPrnNo() {
+        return prnNo;
     }
 
-    public void setPRNno(String PRNno) {
-        this.PRNno = PRNno;
+    public void setPrnNo(String prnNo) {
+        this.prnNo = prnNo;
     }
 
     public String getName() {
@@ -71,8 +76,9 @@ public class Student {
         for (Subject subject : subjects) {
             totalMarks += subject.getTotal();
         }
-        double averageMarks = totalMarks / subjects.size();
-        return Math.round((averageMarks / 10) * 100.0) / 100.0;
+        // CGPA = total marks of all subjects / (number of subjects * 10)
+        double cgpa = totalMarks / (subjects.size() * 10.0);
+        return Math.round(cgpa * 100.0) / 100.0;
     }
 
     public String getOverallGrade() {

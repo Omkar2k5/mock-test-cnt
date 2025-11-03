@@ -47,7 +47,7 @@ export function Home() {
   }
 
   const calculateTotal = (subject: Subject): number => {
-    return parseFloat(((subject.mse + subject.ese) / 100).toFixed(2))
+    return subject.mse + subject.ese
   }
 
   const getGrade = (marks: number): string => {
@@ -61,8 +61,8 @@ export function Home() {
 
   const calculateCGPA = (): number => {
     const totalMarks = student.subjects.reduce((sum, subject) => sum + calculateTotal(subject), 0)
-    const averageMarks = totalMarks / student.subjects.length
-    return parseFloat((averageMarks / 10).toFixed(2))
+    // CGPA = total marks / (number of subjects * 10)
+    return parseFloat((totalMarks / (student.subjects.length * 10)).toFixed(2))
   }
 
   return (
@@ -159,12 +159,8 @@ export function Home() {
                   <span className="value">{student.subjects.length}</span>
                 </div>
                 <div className="stat">
-                  <span className="label">Average Marks:</span>
-                  <span className="value">
-                    {parseFloat(
-                      (student.subjects.reduce((sum, subject) => sum + calculateTotal(subject), 0) / student.subjects.length).toFixed(2)
-                    )}
-                  </span>
+                  <span className="label">CGPA:</span>
+                  <span className="value">{calculateCGPA()}</span>
                 </div>
                 <div className="stat">
                   <span className="label">Overall Grade:</span>
@@ -178,7 +174,7 @@ export function Home() {
 
           <div className="footer-note">
             <p><strong>Grading Scale:</strong> A+ (90-100), A (80-89), B (70-79), C (60-69), D (50-59), F (Below 50)</p>
-            <p><strong>Note:</strong> Total = (MSE + ESE) / 100</p>
+            <p><strong>Note:</strong> Total = MSE + ESE | CGPA = Total Marks / (Subjects × 10)</p>
           </div>
         </>
       )}

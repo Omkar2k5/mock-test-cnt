@@ -32,10 +32,20 @@ public class StudentController {
      */
     @GetMapping("/prn/{prnNo}")
     public ResponseEntity<?> getStudentByPrnNo(@PathVariable String prnNo) {
+        System.out.println("Searching for PRN: " + prnNo);
         Optional<Student> student = studentService.getStudentByPrnNo(prnNo);
+        System.out.println("Student found: " + student.isPresent());
         if (student.isPresent()) {
+            System.out.println("Returning student: " + student.get().getName());
             return ResponseEntity.ok(student.get());
         } else {
+            System.out.println("Student not found in database");
+            // Debug: Let's check all students
+            List<Student> allStudents = studentService.getAllStudents();
+            System.out.println("Total students in DB: " + allStudents.size());
+            if (!allStudents.isEmpty()) {
+                System.out.println("First student PRN: " + allStudents.get(0).getPrnNo());
+            }
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body("{\"error\": \"Student with PRN " + prnNo + " not found\"}");
         }

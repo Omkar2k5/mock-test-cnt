@@ -49,7 +49,7 @@ public class Subject {
     }
 
     public double getTotal() {
-        return (mse * 0.3) + (ese * 0.7);
+        return mse + ese;
     }
 
     public String getGrade() {
